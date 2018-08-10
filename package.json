@@ -1,0 +1,33 @@
+{
+  "name": "opencam",
+  "version": "1.0.0",
+  "description": "Wrapper em JavaScript para uso da API de Dados Abertos da Câmara",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hudson-s/opencam-js.git"
+  },
+  "keywords": [
+    "Dados",
+    "Abertos",
+    "da",
+    "Câmara",
+    "Wrapper",
+    "js"
+  ],
+  "author": "Hudson dos Santos <hudson.alves@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hudson-s/opencam-js/issues"
+  },
+  "homepage": "https://github.com/hudson-s/opencam-js#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
