@@ -7,6 +7,11 @@
     "lint": "./node_modules/.bin/eslint ./src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hudson-s/opencam-js.git"
@@ -14,7 +19,6 @@
   "keywords": [
     "Dados",
     "Abertos",
-    "da",
     "Câmara",
     "Wrapper",
     "js"
@@ -28,6 +32,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0"
+    "eslint-plugin-import": "^2.13.0",
+    "husky": "^0.14.3"
   }
 }
