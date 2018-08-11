@@ -21,9 +21,14 @@ const events = ID => (
   fetch(`${API_URL}/deputados/${ID}/eventos?ordem=ASC&ordenarPor=dataHoraInicio`)
     .then(data => data.json())
 );
-const agencies = () => {};
-const board = () => {};
-const situation = () => {};
+const agencies = ID => (
+  fetch(`${API_URL}/deputados/${ID}/orgaos?ordem=ASC&ordenarPor=dataInicio`)
+    .then(data => data.json())
+);
+const board = ID => (
+  fetch(`${API_URL}/legislaturas/${ID}/mesa`)
+    .then(data => data.json())
+);
 
 export {
   search,
@@ -32,5 +37,4 @@ export {
   events,
   agencies,
   board,
-  situation,
 };

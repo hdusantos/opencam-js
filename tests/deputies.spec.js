@@ -9,7 +9,6 @@ import {
   events,
   agencies,
   board,
-  situation,
 } from '../src/deputies';
 
 chai.use(sinonChai);
@@ -44,9 +43,6 @@ describe('Deputies', () => {
     });
     it('Should exist the board method', () => {
       expect(board).to.be.a('function');
-    });
-    it('Should exist the situation method', () => {
-      expect(situation).to.be.a('function');
     });
   });
 
@@ -112,6 +108,40 @@ describe('Deputies', () => {
     });
     it('Should return the JSON data from the promise', () => {
       const dpt = events(73441);
+      dpt.then((data) => {
+        expect(data).to.be.eql({ body: 'json' });
+      });
+    });
+  });
+
+  describe('agencies', () => {
+    it('Should call fetch function', () => {
+      const dpt = agencies();
+      expect(stubedFetch).to.have.been.calledOnce;
+    });
+    it('Should receive the correct url to fetch', () => {
+      const dpt = agencies(12345);
+      expect(stubedFetch).to.have.been.calledWith('https://dadosabertos.camara.leg.br/api/v2/deputados/12345/orgaos?ordem=ASC&ordenarPor=dataInicio');
+    });
+    it('Should return the JSON data from the promise', () => {
+      const dpt = agencies(12345);
+      dpt.then((data) => {
+        expect(data).to.be.eql({ body: 'json' });
+      });
+    });
+  });
+
+  describe('board', () => {
+    it('Should call fetch function', () => {
+      const dpt = board();
+      expect(stubedFetch).to.have.been.calledOnce;
+    });
+    it('Should receive the correct url to fetch', () => {
+      const dpt = board(12345);
+      expect(stubedFetch).to.have.been.calledWith('https://dadosabertos.camara.leg.br/api/v2/legislaturas/12345/mesa');
+    });
+    it('Should return the JSON data from the promise', () => {
+      const dpt = board(12345);
       dpt.then((data) => {
         expect(data).to.be.eql({ body: 'json' });
       });
