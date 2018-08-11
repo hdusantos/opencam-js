@@ -13,7 +13,10 @@ const details = ID => (
   fetch(`${API_URL}/deputados/${ID}`)
     .then(data => data.json())
 );
-const expenses = () => {};
+const expenses = ID => (
+  fetch(`${API_URL}/deputados/${ID}/despesas?ordem=ASC&ordenarPor=ano`)
+    .then(data => data.json())
+);
 const events = () => {};
 const agencies = () => {};
 const board = () => {};

@@ -50,7 +50,7 @@ describe('Deputies', () => {
     });
   });
 
-  describe('Search', () => {
+  describe('search', () => {
     it('Should call fetch function', () => {
       const dpt = search();
       expect(stubedFetch).to.have.been.calledOnce;
@@ -67,7 +67,7 @@ describe('Deputies', () => {
     });
   });
 
-  describe('Details', () => {
+  describe('details', () => {
     it('Should call fetch function', () => {
       const dpt = details();
       expect(stubedFetch).to.have.been.calledOnce;
@@ -78,6 +78,23 @@ describe('Deputies', () => {
     });
     it('Should return the JSON data from the promise', () => {
       const dpt = details(73441);
+      dpt.then((data) => {
+        expect(data).to.be.eql({ body: 'json' });
+      });
+    });
+  });
+
+  describe('expenses', () => {
+    it('Should call fetch function', () => {
+      const dpt = expenses();
+      expect(stubedFetch).to.have.been.calledOnce;
+    });
+    it('Should receive the correct url to fetch', () => {
+      const dpt = expenses(64960);
+      expect(stubedFetch).to.have.been.calledWith('https://dadosabertos.camara.leg.br/api/v2/deputados/64960/despesas?ordem=ASC&ordenarPor=ano');
+    });
+    it('Should return the JSON data from the promise', () => {
+      const dpt = expenses(64960);
       dpt.then((data) => {
         expect(data).to.be.eql({ body: 'json' });
       });
