@@ -17,7 +17,10 @@ const expenses = ID => (
   fetch(`${API_URL}/deputados/${ID}/despesas?ordem=ASC&ordenarPor=ano`)
     .then(data => data.json())
 );
-const events = () => {};
+const events = ID => (
+  fetch(`${API_URL}/deputados/${ID}/eventos?ordem=ASC&ordenarPor=dataHoraInicio`)
+    .then(data => data.json())
+);
 const agencies = () => {};
 const board = () => {};
 const situation = () => {};

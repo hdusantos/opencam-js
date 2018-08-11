@@ -100,4 +100,21 @@ describe('Deputies', () => {
       });
     });
   });
+
+  describe('events', () => {
+    it('Should call fetch function', () => {
+      const dpt = events();
+      expect(stubedFetch).to.have.been.calledOnce;
+    });
+    it('Should receive the correct url to fetch', () => {
+      const dpt = events(73441);
+      expect(stubedFetch).to.have.been.calledWith('https://dadosabertos.camara.leg.br/api/v2/deputados/73441/eventos?ordem=ASC&ordenarPor=dataHoraInicio');
+    });
+    it('Should return the JSON data from the promise', () => {
+      const dpt = events(73441);
+      dpt.then((data) => {
+        expect(data).to.be.eql({ body: 'json' });
+      });
+    });
+  });
 });
