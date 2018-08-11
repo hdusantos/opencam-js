@@ -66,4 +66,21 @@ describe('Deputies', () => {
       });
     });
   });
+
+  describe('Details', () => {
+    it('Should call fetch function', () => {
+      const dpt = details();
+      expect(stubedFetch).to.have.been.calledOnce;
+    });
+    it('Should receive the correct url to fetch', () => {
+      const dpt = details(73441);
+      expect(stubedFetch).to.have.been.calledWith('https://dadosabertos.camara.leg.br/api/v2/deputados/73441');
+    });
+    it('Should return the JSON data from the promise', () => {
+      const dpt = details(73441);
+      dpt.then((data) => {
+        expect(data).to.be.eql({ body: 'json' });
+      });
+    });
+  });
 });

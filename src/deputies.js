@@ -9,7 +9,10 @@ const search = (name) => {
     .then(data => data.json());
 };
 
-const details = () => {};
+const details = ID => (
+  fetch(`${API_URL}/deputados/${ID}`)
+    .then(data => data.json())
+);
 const expenses = () => {};
 const events = () => {};
 const agencies = () => {};
