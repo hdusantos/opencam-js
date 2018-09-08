@@ -4,9 +4,14 @@
   "description": "Wrapper em JavaScript para uso da API de Dados Abertos da Câmara",
   "main": "index.js",
   "scripts": {
+    "clear": "rimraf lib",
+    "compile": "npm run clear && ./node_modules/.bin/babel src --out-dir lib",
+    "build:umd": "./node_modules/.bin/webpack",
+    "build:umd:min": "./node_modules/.bin/webpack -p",
+    "build:all": "npm run compile && npm run build:umd && npm run build:umd:min",
     "lint": "./node_modules/.bin/eslint ./src/*.js",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require @babel/register",
+    "test:watch": "./node_modules/.bin/mocha tests/**/*.spec.js --require @babel/register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
@@ -45,9 +50,11 @@
   },
   "homepage": "https://github.com/hudson-s/opencam-js#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.2",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -56,7 +63,10 @@
     "mocha": "^5.2.0",
     "node-fetch": "^2.2.0",
     "nyc": "^12.0.2",
+    "rimraf": "^2.6.2",
     "sinon": "^6.1.5",
-    "sinon-chai": "^3.2.0"
+    "sinon-chai": "^3.2.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   }
 }
