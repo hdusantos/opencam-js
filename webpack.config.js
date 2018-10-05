@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/deputies.js',
+  entry: './index',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    library: 'opencam',
+    library: 'Opencam',
     libraryTarget: 'umd',
     filename: 'opencam.umd.js',
   },
