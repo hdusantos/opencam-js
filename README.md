@@ -1,6 +1,6 @@
-# opencam-js
-[![Build Status](https://travis-ci.org/hdusantos/opencam-js.svg?branch=master)](https://travis-ci.org/hdusantos/opencam-js)
-[![Coverage Status](https://coveralls.io/repos/github/hdusantos/opencam-js/badge.svg?branch=master)](https://coveralls.io/github/hdusantos/opencam-js?branch=master)
+# opencam
+[![Build Status](https://travis-ci.org/hdusantos/opencam.svg?branch=master)](https://travis-ci.org/hdusantos/opencam)
+[![Coverage Status](https://coveralls.io/repos/github/hdusantos/opencam/badge.svg?branch=master)](https://coveralls.io/github/hdusantos/opencam?branch=master)
 
 A JavaScript Wrapper to use API [Dados Abertos da Câmara](https://dadosabertos.camara.leg.br/)
 
