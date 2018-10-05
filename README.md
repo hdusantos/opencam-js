@@ -14,6 +14,12 @@ This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests
 ## Methods
 
 > Follow the methods that the library provides.
+- [search](###deputies.search(name))
+- [details](###deputies.details(id))
+- [expenses](###deputies.expenses(id))
+- [events](###deputies.events(id))
+- [agencies](###deputies.agencies(id))
+- [board](###deputies.board(id))
 
 ### deputies.search(name)
 
