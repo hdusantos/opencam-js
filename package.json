@@ -1,6 +1,6 @@
 {
   "name": "opencam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper em JavaScript para uso da API de Dados Abertos da Câmara",
   "main": "lib/index.js",
   "scripts": {
