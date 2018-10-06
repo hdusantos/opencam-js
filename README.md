@@ -45,12 +45,12 @@ opencam.deputies.search("Maria");
 ## Methods
 
 > Follow the methods that the library provides.
-- [search](###deputies.search(name))
-- [details](###deputies.details(id))
-- [expenses](###deputies.expenses(id))
-- [events](###deputies.events(id))
-- [agencies](###deputies.agencies(id))
-- [board](###deputies.board(id))
+- [search](#deputies.search(name))
+- [details](#deputies.details(id))
+- [expenses](#deputies.expenses(id))
+- [events](#deputies.events(id))
+- [agencies](#deputies.agencies(id))
+- [board](#deputies.board(id))
 
 ### deputies.search(name)
 
@@ -177,3 +177,12 @@ opencam.deputies.board(000000)
     // do what you want with the data
   })
 ```
+
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/hdusantos/opencam/tags).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
