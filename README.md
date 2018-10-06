@@ -6,10 +6,41 @@ A JavaScript Wrapper to use API [Dados Abertos da Câmara](https://dadosabertos.
 
 > See more about the API: https://dadosabertos.camara.leg.br/
 
+## Installation
+
+```sh
+npm install opencam --save
+```
 
 ## Dependencies
 
-This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests to the Spotify Web API. For environments that don't support fetch, you'll need to provide a [polyfill](https://github.com/github/fetch) to browser or [polyfill](https://github.com/bitinn/node-fetch) to Node.
+This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests to the  "Dados Abertos da Câmara" API. For environments that don't support fetch, you'll need to provide a [polyfill](https://github.com/github/fetch) to browser or [polyfill](https://github.com/bitinn/node-fetch) to Node.
+
+
+## How to use
+
+### ES6
+
+```js
+import Opencam from 'opencam';
+
+const opencam = new Opencam({});
+
+// using  method
+opencam.deputies.search("Maria");
+```
+
+### CommonJS
+
+```js
+const Opencam = require('opencam').default;
+
+const opencam = new Opencam({});
+
+// using  method
+opencam.deputies.search("Maria");
+```
+
 
 ## Methods
 
