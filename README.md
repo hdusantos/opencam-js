@@ -6,15 +6,18 @@ A JavaScript Wrapper to use API [Dados Abertos da Câmara](https://dadosabertos.
 
 > See more about the API: https://dadosabertos.camara.leg.br/
 
+
 ## Installation
 
 ```sh
 npm install opencam --save
 ```
 
+
 ## Dependencies
 
 This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests to the  "Dados Abertos da Câmara" API. For environments that don't support fetch, you'll need to provide a [polyfill](https://github.com/github/fetch) to browser or [polyfill](https://github.com/bitinn/node-fetch) to Node.
+
 
 
 ## How to use
@@ -40,6 +43,15 @@ const opencam = new Opencam({});
 // using  method
 opencam.deputies.search("Maria");
 ```
+
+### UMD in Browser
+
+UMD files are located in the `./dist` folder
+
+    .
+    ├── dist                   # UMD Folder
+    |   └── opencam.umd.js     # UMD File - File to use with the html script tag
+    |__ lib                    # Compiled files
 
 
 ## Methods
