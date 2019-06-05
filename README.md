@@ -57,12 +57,12 @@ UMD files are located in the `./dist` folder
 ## Methods
 
 > Follow the methods that the library provides.
-- [search](#deputies.search(name))
-- [details](#deputies.details(id))
-- [expenses](#deputies.expenses(id))
-- [events](#deputies.events(id))
-- [agencies](#deputies.agencies(id))
-- [board](#deputies.board(id))
+- [search](#deputiessearchname)
+- [details](#deputiesdetailsid)
+- [expenses](#deputiesexpensesid)
+- [events](#deputieseventsid)
+- [agencies](#deputiesagenciesid)
+- [board](#deputiesboardid)
 
 ### deputies.search(name)
 
